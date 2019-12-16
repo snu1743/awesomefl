@@ -277,7 +277,7 @@ globalkeys = gears.table.join(
         {description = "focus previous by index", group = "client"}
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+              {descrkiption = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -580,3 +580,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 -- os.execute("x-terminal-emulator -e speedometer -r enp2s0 -t enp2s0")
 -- os.execute("x-terminal-emulator -e htop")
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
